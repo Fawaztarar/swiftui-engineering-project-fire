@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WelcomePageView: View {
     var body: some View {
-        ZStack {
+        NavigationView {
             VStack {
                 Spacer()
 
@@ -28,11 +28,12 @@ struct WelcomePageView: View {
                 
                 Spacer()
 
-                Button("Sign Up") {
-                    // TODO: sign up logic
-                }
-                .accessibilityIdentifier("signUpButton")
+                NavigationLink("Sign Up", destination: SignUpView())
+                    .padding()
                 
+                NavigationLink("Log In", destination: LoginView())
+                    .padding()
+
                 Spacer()
             }
         }

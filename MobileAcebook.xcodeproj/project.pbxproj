@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40E03D3D2B8626860086060B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E03D3C2B8626860086060B /* ContentView.swift */; };
+		40E0D3432B86206E003A25AD /* AuthenticationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0D3422B86206E003A25AD /* AuthenticationServiceProtocol.swift */; };
+		40E0D34F2B86210D003A25AD /* signUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0D34E2B86210D003A25AD /* signUpView.swift */; };
+		40E0D3512B862153003A25AD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0D3502B862153003A25AD /* LoginView.swift */; };
+		40E0D3542B8621AD003A25AD /* UserProfileView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0D3532B8621AD003A25AD /* UserProfileView2.swift */; };
+		40E0D3582B8624AA003A25AD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0D3572B8624AA003A25AD /* NetworkManager.swift */; };
 		AE5D85B02AC8A221009680C6 /* MobileAcebookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D85AF2AC8A221009680C6 /* MobileAcebookApp.swift */; };
 		AE5D85B42AC8A224009680C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE5D85B32AC8A224009680C6 /* Assets.xcassets */; };
 		AE5D85B72AC8A224009680C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE5D85B62AC8A224009680C6 /* Preview Assets.xcassets */; };
@@ -15,10 +21,7 @@
 		AE5D85CD2AC8A224009680C6 /* MobileAcebookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D85CC2AC8A224009680C6 /* MobileAcebookUITestsLaunchTests.swift */; };
 		AE5D85DA2AC8A337009680C6 /* WelcomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D85D92AC8A337009680C6 /* WelcomePageView.swift */; };
 		AE5D85DC2AC8A422009680C6 /* WelcomePageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D85DB2AC8A422009680C6 /* WelcomePageUITests.swift */; };
-		AE5D85E12AC9AFA9009680C6 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D85E02AC9AFA9009680C6 /* AuthenticationService.swift */; };
 		AE5D85E32AC9AFD2009680C6 /* MockAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D85E22AC9AFD2009680C6 /* MockAuthenticationService.swift */; };
-		AE5D85E62AC9B077009680C6 /* AuthenticationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D85E52AC9B077009680C6 /* AuthenticationServiceProtocol.swift */; };
-		AE5D85E82AC9B29A009680C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D85E72AC9B29A009680C6 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40E03D3C2B8626860086060B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		40E0D3422B86206E003A25AD /* AuthenticationServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationServiceProtocol.swift; path = ../../../Acebook/Acebook/Protocols/AuthenticationServiceProtocol.swift; sourceTree = "<group>"; };
+		40E0D3452B86208A003A25AD /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		40E0D3462B86208A003A25AD /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		40E0D3472B86208A003A25AD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		40E0D3482B86208A003A25AD /* SignUpDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDetails.swift; sourceTree = "<group>"; };
+		40E0D3492B86208A003A25AD /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		40E0D34B2B862090003A25AD /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		40E0D34C2B862090003A25AD /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		40E0D34D2B862090003A25AD /* TokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStorage.swift; sourceTree = "<group>"; };
+		40E0D34E2B86210D003A25AD /* signUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpView.swift; sourceTree = "<group>"; };
+		40E0D3502B862153003A25AD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		40E0D3532B8621AD003A25AD /* UserProfileView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView2.swift; sourceTree = "<group>"; };
+		40E0D3572B8624AA003A25AD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		40F29B542B8617EF008D944B /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		40F29B552B8617EF008D944B /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		40F29B562B8617EF008D944B /* TokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStorage.swift; sourceTree = "<group>"; };
 		AE5D85AC2AC8A221009680C6 /* MobileAcebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAcebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE5D85AF2AC8A221009680C6 /* MobileAcebookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAcebookApp.swift; sourceTree = "<group>"; };
 		AE5D85B32AC8A224009680C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,10 +70,7 @@
 		AE5D85CC2AC8A224009680C6 /* MobileAcebookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAcebookUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AE5D85D92AC8A337009680C6 /* WelcomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageView.swift; sourceTree = "<group>"; };
 		AE5D85DB2AC8A422009680C6 /* WelcomePageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageUITests.swift; sourceTree = "<group>"; };
-		AE5D85E02AC9AFA9009680C6 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		AE5D85E22AC9AFD2009680C6 /* MockAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationService.swift; sourceTree = "<group>"; };
-		AE5D85E52AC9B077009680C6 /* AuthenticationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceProtocol.swift; sourceTree = "<group>"; };
-		AE5D85E72AC9B29A009680C6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +98,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40E0D3442B86208A003A25AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				40E0D3452B86208A003A25AD /* LoginRequest.swift */,
+				40E0D3462B86208A003A25AD /* Comment.swift */,
+				40E0D3472B86208A003A25AD /* User.swift */,
+				40E0D3482B86208A003A25AD /* SignUpDetails.swift */,
+				40E0D3492B86208A003A25AD /* Post.swift */,
+			);
+			name = Models;
+			path = ../../Acebook/Acebook/Models;
+			sourceTree = "<group>";
+		};
+		40E0D34A2B862090003A25AD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				40E0D34B2B862090003A25AD /* DateUtils.swift */,
+				40E0D34C2B862090003A25AD /* AuthenticationService.swift */,
+				40E0D34D2B862090003A25AD /* TokenStorage.swift */,
+			);
+			name = Services;
+			path = ../../Acebook/Acebook/Services;
+			sourceTree = "<group>";
+		};
+		40E0D3522B862191003A25AD /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				40E0D3532B8621AD003A25AD /* UserProfileView2.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		40F29B432B861522008D944B /* AuthenticationUI */ = {
+			isa = PBXGroup;
+			children = (
+				40E0D34E2B86210D003A25AD /* signUpView.swift */,
+				40E0D3502B862153003A25AD /* LoginView.swift */,
+			);
+			path = AuthenticationUI;
+			sourceTree = "<group>";
+		};
+		40F29B4C2B8616E7008D944B /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				40E0D3572B8624AA003A25AD /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		40F29B532B8617EF008D944B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				40F29B542B8617EF008D944B /* DateUtils.swift */,
+				40F29B552B8617EF008D944B /* AuthenticationService.swift */,
+				40F29B562B8617EF008D944B /* TokenStorage.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		AE5D85A32AC8A221009680C6 = {
 			isa = PBXGroup;
 			children = (
@@ -104,13 +180,17 @@
 		AE5D85AE2AC8A221009680C6 /* MobileAcebook */ = {
 			isa = PBXGroup;
 			children = (
+				40E0D3522B862191003A25AD /* Post */,
+				40F29B4C2B8616E7008D944B /* NetworkManager */,
+				40E0D34A2B862090003A25AD /* Services */,
+				40E0D3442B86208A003A25AD /* Models */,
 				AE5D85E42AC9B060009680C6 /* Protocols */,
-				AE5D85DF2AC9AF83009680C6 /* Models */,
-				AE5D85DD2AC9AF72009680C6 /* Services */,
 				AE5D85AF2AC8A221009680C6 /* MobileAcebookApp.swift */,
 				AE5D85B32AC8A224009680C6 /* Assets.xcassets */,
 				AE5D85B52AC8A224009680C6 /* Preview Content */,
 				AE5D85D92AC8A337009680C6 /* WelcomePageView.swift */,
+				40E03D3C2B8626860086060B /* ContentView.swift */,
+				40F29B432B861522008D944B /* AuthenticationUI */,
 			);
 			path = MobileAcebook;
 			sourceTree = "<group>";
@@ -135,19 +215,12 @@
 		AE5D85C92AC8A224009680C6 /* MobileAcebookUITests */ = {
 			isa = PBXGroup;
 			children = (
+				40F29B532B8617EF008D944B /* Services */,
 				AE5D85CA2AC8A224009680C6 /* MobileAcebookUITests.swift */,
 				AE5D85CC2AC8A224009680C6 /* MobileAcebookUITestsLaunchTests.swift */,
 				AE5D85DB2AC8A422009680C6 /* WelcomePageUITests.swift */,
 			);
 			path = MobileAcebookUITests;
-			sourceTree = "<group>";
-		};
-		AE5D85DD2AC9AF72009680C6 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				AE5D85E02AC9AFA9009680C6 /* AuthenticationService.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		AE5D85DE2AC9AF78009680C6 /* Services */ = {
@@ -158,18 +231,10 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		AE5D85DF2AC9AF83009680C6 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				AE5D85E72AC9B29A009680C6 /* User.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		AE5D85E42AC9B060009680C6 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				AE5D85E52AC9B077009680C6 /* AuthenticationServiceProtocol.swift */,
+				40E0D3422B86206E003A25AD /* AuthenticationServiceProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -304,10 +369,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE5D85E12AC9AFA9009680C6 /* AuthenticationService.swift in Sources */,
-				AE5D85E62AC9B077009680C6 /* AuthenticationServiceProtocol.swift in Sources */,
+				40E0D3542B8621AD003A25AD /* UserProfileView2.swift in Sources */,
+				40E0D34F2B86210D003A25AD /* signUpView.swift in Sources */,
+				40E0D3432B86206E003A25AD /* AuthenticationServiceProtocol.swift in Sources */,
+				40E0D3582B8624AA003A25AD /* NetworkManager.swift in Sources */,
+				40E03D3D2B8626860086060B /* ContentView.swift in Sources */,
 				AE5D85B02AC8A221009680C6 /* MobileAcebookApp.swift in Sources */,
-				AE5D85E82AC9B29A009680C6 /* User.swift in Sources */,
+				40E0D3512B862153003A25AD /* LoginView.swift in Sources */,
 				AE5D85DA2AC8A337009680C6 /* WelcomePageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
