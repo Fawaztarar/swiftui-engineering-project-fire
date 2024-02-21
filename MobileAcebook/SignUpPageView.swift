@@ -22,24 +22,63 @@ struct SignUpPageView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width:85)
-                    .padding()
-                Form {
+                    .padding(40)
+               List {
                     ZStack {
                         Rectangle()
-                            .fill(Color(hex: "#1E1D23"))
-                            .frame(width:365, height: 60)
+                            .fill(Color(hex: "#142C35"))
+                            .frame(width: 365, height: 80)
                             .cornerRadius(10)
-                            //.stroke(Color.pink)
                          TextField("Please Enter your username", text: $username)
                              .textInputAutocapitalization(.never)
                              .frame(width: 320, height: 40)
-                             // .foregroundColor(Color.white)
                              .padding(.horizontal, 10)
                              .multilineTextAlignment(.center)
+                             .foregroundColor(Color.white)
                     }
+                    .listRowBackground(Color(hex: "#1E1D23"))
+                    .padding(10)
+                   ZStack {
+                       Rectangle()
+                           .fill(Color(hex: "#142C35"))
+                           .frame(width: 365, height: 80)
+                           .cornerRadius(10)
+                       TextField("Please Enter your username", text: $username)
+                           .textInputAutocapitalization(.never)
+                           .frame(width: 320, height: 40)
+                           .padding(.horizontal, 10)
+                           .multilineTextAlignment(.center)
+                           .foregroundColor(Color.white)
+                   }
+                    .listRowBackground(Color(hex: "#1E1D23"))
+                    .padding(10)
+                   ZStack {
+                       Rectangle()
+                           .fill(Color(hex: "#142C35"))
+                           .frame(width: 365, height: 80)
+                           .cornerRadius(10)
+                       TextField("Please Enter your username", text: $username)
+                           .textInputAutocapitalization(.never)
+                           .frame(width: 320, height: 40)
+                           .padding(.horizontal, 10)
+                           .multilineTextAlignment(.center)
+                           .foregroundColor(Color.white)
+                   }
+                    .listRowBackground(Color(hex: "#1E1D23"))
+                    .padding()
                 }
+               .listStyle(PlainListStyle())
                 .scrollContentBackground(.hidden)
+                Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                }
+                .padding(5)
+                Button("Sign up without and avatar") {
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                }
+                .padding(.bottom, 100)
             }
+           
         }
     }
 }
@@ -48,8 +87,18 @@ struct SignUpPageView: View {
     SignUpPageView()
 }
 /*
- 
  ZStack {
+                         Rectangle()
+                             .fill(Color("white"))
+                             .frame(width: 365, height: 60)
+                             .cornerRadius(10)
+                         TextField("Email", text: $email)
+                             .frame(width: 320, height: 60)
+                             .foregroundColor(Color("backgroudBlue"))
+                             .padding(.horizontal, 10)
+                     }.offset(y: -90)
+                     
+                     ZStack {
                          Rectangle()
                              .fill(Color("white"))
                              .frame(width: 365, height: 60)
@@ -60,6 +109,5 @@ struct SignUpPageView: View {
                              .frame(width: 320, height: 40)
                              .foregroundColor(Color("backgroudBlue"))
                              .padding(.horizontal, 10)
-                     }.offset(y: -90)
-*/
+                     }.offset(y: -90)*/
 
