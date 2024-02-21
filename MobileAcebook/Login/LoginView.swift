@@ -21,47 +21,60 @@ struct LoginView: View {
                 VStack(spacing: 80) {
                     Spacer()
                         .frame(height: 10)
-                        
-                    Image("logo")
+                    
+                    Image("acebookLogo")
                         .resizable()
                         .frame(width: 100, height: 100)
-                       
-
+                    
+                    
                     VStack(spacing: 30){
                         
-                
-                    
-                    VStack {
                         
-                        ZStack {
-                            Rectangle()
-                                .fill(Color("white"))
-                                .frame(width: 365, height: 60)
-                                .cornerRadius(10)
-                            TextField("Email", text: $email)
-                                .keyboardType(.emailAddress)
-                                .frame(width: 320, height: 60)
-                                .textInputAutocapitalization(.never)
-                                .foregroundColor(Color("backgroudBlue"))
-                                .padding(.horizontal, 10)
+                        
+                        VStack {
+                            
+                            ZStack {
+                                Rectangle()
+                                    .fill(Color("darkBlueButton"))
+                                    .frame(width: 365, height: 60)
+                                    .cornerRadius(10)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color("grayBorder"), lineWidth: 1)
+                                    )
+                                TextField("Email", text: $email)
+                                    .keyboardType(.emailAddress)
+                                    .frame(width: 320, height: 60)
+                                    .textInputAutocapitalization(.never)
+                                    .foregroundColor(Color("white"))
+                                    .padding(.horizontal, 10)
+                            }
+                            
+                            
+                            ZStack {
+                                Rectangle()
+                                    .fill(Color("darkBlueButton"))
+                                    .frame(width: 365, height: 60)
+                                    .cornerRadius(10)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color("grayBorder"), lineWidth: 1)
+                                    )
+                                SecureField("Password", text: $password)
+                                    .textInputAutocapitalization(.never)
+                                    .frame(width: 320, height: 40)
+                                    .foregroundColor(Color("white"))
+                                    .padding(.horizontal, 10)
+                            }
+                            
+                            NavigationLink(destination: Text("Form to refresh password")){
+                                Text("Forgotten password?")
+                                
+                            }
+                            
+                            
                         }
-
                         
-                        ZStack {
-                            Rectangle()
-                                .fill(Color("white"))
-                                .frame(width: 365, height: 60)
-                                .cornerRadius(10)
-                            SecureField("Password", text: $password)
-                                .textInputAutocapitalization(.never)
-                                .frame(width: 320, height: 40)
-                                .foregroundColor(Color("backgroudBlue"))
-                                .padding(.horizontal, 10)
-                        }
-
-                        
-                    }
-                    
                         VStack(spacing: 10) {
                             
                             
@@ -103,15 +116,15 @@ struct LoginView: View {
                                 
                             }
                         }
+                        
+                    }
                     
                 }
-                
             }
+            .navigationBarHidden(true)
+            .ignoresSafeArea()
         }
-        .navigationBarHidden(true)
-        .ignoresSafeArea()
     }
-}
 }
 
 struct LoginView_Previews: PreviewProvider {
