@@ -86,6 +86,8 @@ struct LoginView: View {
 //                          navigation just work if isActive = true(isLoggedIn)
                             NavigationLink(isActive: $isLoggedIn) {
                                 Text("Successful")
+                                
+                                
                             } label: {
                                 VStack {
                                     Button {
