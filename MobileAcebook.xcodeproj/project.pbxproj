@@ -19,6 +19,11 @@
 		AE5D85E32AC9AFD2009680C6 /* MockAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D85E22AC9AFD2009680C6 /* MockAuthenticationService.swift */; };
 		AE5D85E62AC9B077009680C6 /* AuthenticationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D85E52AC9B077009680C6 /* AuthenticationServiceProtocol.swift */; };
 		AE5D85E82AC9B29A009680C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D85E72AC9B29A009680C6 /* User.swift */; };
+		E648FC9B2B84FDBE005D59E6 /* PostMessageForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E648FC9A2B84FDBE005D59E6 /* PostMessageForm.swift */; };
+		E648FC9D2B84FFA8005D59E6 /* PostsFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E648FC9C2B84FFA8005D59E6 /* PostsFormController.swift */; };
+		E648FC9F2B850019005D59E6 /* PostsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E648FC9E2B850018005D59E6 /* PostsServiceProtocol.swift */; };
+		E648FCA12B8521EE005D59E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E648FCA02B8521EE005D59E6 /* SceneDelegate.swift */; };
+		E648FCA32B85FF60005D59E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E648FCA22B85FF60005D59E6 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,11 @@
 		AE5D85E22AC9AFD2009680C6 /* MockAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationService.swift; sourceTree = "<group>"; };
 		AE5D85E52AC9B077009680C6 /* AuthenticationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceProtocol.swift; sourceTree = "<group>"; };
 		AE5D85E72AC9B29A009680C6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E648FC9A2B84FDBE005D59E6 /* PostMessageForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostMessageForm.swift; sourceTree = "<group>"; };
+		E648FC9C2B84FFA8005D59E6 /* PostsFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsFormController.swift; sourceTree = "<group>"; };
+		E648FC9E2B850018005D59E6 /* PostsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsServiceProtocol.swift; sourceTree = "<group>"; };
+		E648FCA02B8521EE005D59E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E648FCA22B85FF60005D59E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +121,9 @@
 				AE5D85B32AC8A224009680C6 /* Assets.xcassets */,
 				AE5D85B52AC8A224009680C6 /* Preview Content */,
 				AE5D85D92AC8A337009680C6 /* WelcomePageView.swift */,
+				E648FC9A2B84FDBE005D59E6 /* PostMessageForm.swift */,
+				E648FCA22B85FF60005D59E6 /* ContentView.swift */,
+				E648FCA02B8521EE005D59E6 /* SceneDelegate.swift */,
 			);
 			path = MobileAcebook;
 			sourceTree = "<group>";
@@ -146,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				AE5D85E02AC9AFA9009680C6 /* AuthenticationService.swift */,
+				E648FC9C2B84FFA8005D59E6 /* PostsFormController.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -170,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				AE5D85E52AC9B077009680C6 /* AuthenticationServiceProtocol.swift */,
+				E648FC9E2B850018005D59E6 /* PostsServiceProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -305,7 +320,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE5D85E12AC9AFA9009680C6 /* AuthenticationService.swift in Sources */,
+				E648FC9F2B850019005D59E6 /* PostsServiceProtocol.swift in Sources */,
+				E648FCA12B8521EE005D59E6 /* SceneDelegate.swift in Sources */,
+				E648FC9B2B84FDBE005D59E6 /* PostMessageForm.swift in Sources */,
+				E648FC9D2B84FFA8005D59E6 /* PostsFormController.swift in Sources */,
 				AE5D85E62AC9B077009680C6 /* AuthenticationServiceProtocol.swift in Sources */,
+				E648FCA32B85FF60005D59E6 /* ContentView.swift in Sources */,
 				AE5D85B02AC8A221009680C6 /* MobileAcebookApp.swift in Sources */,
 				AE5D85E82AC9B29A009680C6 /* User.swift in Sources */,
 				AE5D85DA2AC8A337009680C6 /* WelcomePageView.swift in Sources */,
