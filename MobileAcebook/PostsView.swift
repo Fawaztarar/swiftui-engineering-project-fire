@@ -40,6 +40,7 @@ struct PostsPageView: View {
 struct PostRowView: View {
     @State private var newComment: String = ""
     @State private var post: Post
+    @State private var isLiked: Bool = false
     
     init(post: Post) {
         _post = State(initialValue: post)
@@ -57,9 +58,14 @@ struct PostRowView: View {
                 .frame(height: 100)
             HStack {
                 Button(action: {
-                    // like logic
+                    isLiked.toggle()
+                    if isLiked{
+                        post.addLike()
+                    }else{
+                        post.likes -= 1
+                    }
                 }) {
-                    Image(systemName: "heart")
+                    Image(systemName: isLiked ? "heart.fill": "heart")
                 }
                 Text("\(post.likes)")
                 Spacer()
@@ -77,6 +83,7 @@ struct PostRowView: View {
                 }) {
                     Text("Post Comment")
                 }
+                .disabled(newComment.isEmpty)
             }
             ForEach(post.comments, id: \.self) {comment in Text(comment)}
             .padding()
