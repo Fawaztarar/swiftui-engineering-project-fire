@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		566BEF592B84D62100BDE2A8 /* SignUpPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566BEF582B84D62100BDE2A8 /* SignUpPageView.swift */; };
 		566BEF5B2B84DEE800BDE2A8 /* ColourExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566BEF5A2B84DEE800BDE2A8 /* ColourExtension.swift */; };
+		56B12F8A2B8612B400C0CE68 /* SignUpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B12F892B8612B400C0CE68 /* SignUpPageViewController.swift */; };
 		AE5D85B02AC8A221009680C6 /* MobileAcebookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D85AF2AC8A221009680C6 /* MobileAcebookApp.swift */; };
 		AE5D85B42AC8A224009680C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE5D85B32AC8A224009680C6 /* Assets.xcassets */; };
 		AE5D85B72AC8A224009680C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE5D85B62AC8A224009680C6 /* Preview Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		566BEF582B84D62100BDE2A8 /* SignUpPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPageView.swift; sourceTree = "<group>"; };
 		566BEF5A2B84DEE800BDE2A8 /* ColourExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourExtension.swift; sourceTree = "<group>"; };
+		56B12F892B8612B400C0CE68 /* SignUpPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPageViewController.swift; sourceTree = "<group>"; };
 		AE5D85AC2AC8A221009680C6 /* MobileAcebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAcebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE5D85AF2AC8A221009680C6 /* MobileAcebookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAcebookApp.swift; sourceTree = "<group>"; };
 		AE5D85B32AC8A224009680C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56B12F8B2B86144000C0CE68 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				56B12F892B8612B400C0CE68 /* SignUpPageViewController.swift */,
+				566BEF582B84D62100BDE2A8 /* SignUpPageView.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
 		AE5D85A32AC8A221009680C6 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +119,7 @@
 		AE5D85AE2AC8A221009680C6 /* MobileAcebook */ = {
 			isa = PBXGroup;
 			children = (
+				56B12F8B2B86144000C0CE68 /* Signup */,
 				AE5D85E42AC9B060009680C6 /* Protocols */,
 				AE5D85DF2AC9AF83009680C6 /* Models */,
 				AE5D85DD2AC9AF72009680C6 /* Services */,
@@ -115,7 +127,6 @@
 				AE5D85B32AC8A224009680C6 /* Assets.xcassets */,
 				AE5D85B52AC8A224009680C6 /* Preview Content */,
 				AE5D85D92AC8A337009680C6 /* WelcomePageView.swift */,
-				566BEF582B84D62100BDE2A8 /* SignUpPageView.swift */,
 				566BEF5A2B84DEE800BDE2A8 /* ColourExtension.swift */,
 			);
 			path = MobileAcebook;
@@ -313,6 +324,7 @@
 				AE5D85E12AC9AFA9009680C6 /* AuthenticationService.swift in Sources */,
 				AE5D85E62AC9B077009680C6 /* AuthenticationServiceProtocol.swift in Sources */,
 				AE5D85B02AC8A221009680C6 /* MobileAcebookApp.swift in Sources */,
+				56B12F8A2B8612B400C0CE68 /* SignUpPageViewController.swift in Sources */,
 				566BEF592B84D62100BDE2A8 /* SignUpPageView.swift in Sources */,
 				566BEF5B2B84DEE800BDE2A8 /* ColourExtension.swift in Sources */,
 				AE5D85E82AC9B29A009680C6 /* User.swift in Sources */,

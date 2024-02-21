@@ -11,7 +11,10 @@ import UIKit
 
 struct SignUpPageView: View {
     let backgroundColor = Color(hex: "#1E1D23")
+    
     @State private var username = ""
+    @State private var email = ""
+    @State private var password = ""
     
     var body: some View {
         ZStack {
@@ -43,7 +46,7 @@ struct SignUpPageView: View {
                            .fill(Color(hex: "#142C35"))
                            .frame(width: 365, height: 80)
                            .cornerRadius(10)
-                       TextField("Please Enter your username", text: $username)
+                       TextField("Please Enter your email", text: $email)
                            .textInputAutocapitalization(.never)
                            .frame(width: 320, height: 40)
                            .padding(.horizontal, 10)
@@ -57,7 +60,7 @@ struct SignUpPageView: View {
                            .fill(Color(hex: "#142C35"))
                            .frame(width: 365, height: 80)
                            .cornerRadius(10)
-                       TextField("Please Enter your username", text: $username)
+                       TextField("Please Enter your password", text: $password)
                            .textInputAutocapitalization(.never)
                            .frame(width: 320, height: 40)
                            .padding(.horizontal, 10)
@@ -86,28 +89,3 @@ struct SignUpPageView: View {
 #Preview {
     SignUpPageView()
 }
-/*
- ZStack {
-                         Rectangle()
-                             .fill(Color("white"))
-                             .frame(width: 365, height: 60)
-                             .cornerRadius(10)
-                         TextField("Email", text: $email)
-                             .frame(width: 320, height: 60)
-                             .foregroundColor(Color("backgroudBlue"))
-                             .padding(.horizontal, 10)
-                     }.offset(y: -90)
-                     
-                     ZStack {
-                         Rectangle()
-                             .fill(Color("white"))
-                             .frame(width: 365, height: 60)
-                             .cornerRadius(10)
-                         TextField("Password", text: $password)
-                             .keyboardType(.emailAddress)
-                             .textInputAutocapitalization(.never)
-                             .frame(width: 320, height: 40)
-                             .foregroundColor(Color("backgroudBlue"))
-                             .padding(.horizontal, 10)
-                     }.offset(y: -90)*/
-
