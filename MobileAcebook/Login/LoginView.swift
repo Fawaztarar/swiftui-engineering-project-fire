@@ -11,6 +11,7 @@ struct LoginView: View {
     @State var email = ""
     @State var password = ""
     @State var isLoggedIn = false
+    @State var loginError = false
     @ObservedObject var loginViewModel = LoginViewModel()
     
     var body: some View {
@@ -42,7 +43,10 @@ struct LoginView: View {
                                         RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color("grayBorder"), lineWidth: 1)
                                     )
+                                
                                 TextField("Email", text: $email)
+                                    .textFieldStyle(PlainTextFieldStyle())
+                                        .colorScheme(.dark)
                                     .keyboardType(.emailAddress)
                                     .frame(width: 320, height: 60)
                                     .textInputAutocapitalization(.never)
@@ -61,6 +65,8 @@ struct LoginView: View {
                                             .stroke(Color("grayBorder"), lineWidth: 1)
                                     )
                                 SecureField("Password", text: $password)
+                                    .textFieldStyle(PlainTextFieldStyle())
+                                        .colorScheme(.dark)
                                     .textInputAutocapitalization(.never)
                                     .frame(width: 320, height: 40)
                                     .foregroundColor(Color("white"))
@@ -75,7 +81,7 @@ struct LoginView: View {
                             
                         }
                         
-                        VStack(spacing: 10) {
+                        VStack(spacing: 170) {
                             
                             
                             NavigationLink(isActive: $isLoggedIn) {
@@ -84,7 +90,13 @@ struct LoginView: View {
                                 VStack {
                                     Button {
                                         Task {
-                                            isLoggedIn = await loginViewModel.login(email: email, password: password)
+                                            let loginResult = await loginViewModel.login(email: email, password: password)
+                                            if loginResult {
+                                                isLoggedIn = true
+                                            } else {
+                                                loginError = true
+                                            }
+                                            
                                         }
                                     } label: {
                                         Text("Log in")
@@ -123,6 +135,11 @@ struct LoginView: View {
             }
             .navigationBarHidden(true)
             .ignoresSafeArea()
+            .alert(isPresented: $loginError) {
+                Alert(title: Text("Error"),
+                      message: Text("Log in error. Try again"),
+                      dismissButton: .default(Text("Ok")))
+            }
         }
     }
 }
