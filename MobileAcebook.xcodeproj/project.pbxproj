@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		40E03D3D2B8626860086060B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E03D3C2B8626860086060B /* ContentView.swift */; };
+		40E03D432B8637960086060B /* PostFeedView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E03D422B8637960086060B /* PostFeedView2.swift */; };
 		40E0D3432B86206E003A25AD /* AuthenticationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0D3422B86206E003A25AD /* AuthenticationServiceProtocol.swift */; };
 		40E0D34F2B86210D003A25AD /* signUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0D34E2B86210D003A25AD /* signUpView.swift */; };
 		40E0D3512B862153003A25AD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0D3502B862153003A25AD /* LoginView.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		40E03D3C2B8626860086060B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		40E03D422B8637960086060B /* PostFeedView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFeedView2.swift; sourceTree = "<group>"; };
 		40E0D3422B86206E003A25AD /* AuthenticationServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationServiceProtocol.swift; path = ../../../Acebook/Acebook/Protocols/AuthenticationServiceProtocol.swift; sourceTree = "<group>"; };
 		40E0D3452B86208A003A25AD /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		40E0D3462B86208A003A25AD /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				40E0D3532B8621AD003A25AD /* UserProfileView2.swift */,
+				40E03D422B8637960086060B /* PostFeedView2.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				40E0D3582B8624AA003A25AD /* NetworkManager.swift in Sources */,
 				40E03D3D2B8626860086060B /* ContentView.swift in Sources */,
 				AE5D85B02AC8A221009680C6 /* MobileAcebookApp.swift in Sources */,
+				40E03D432B8637960086060B /* PostFeedView2.swift in Sources */,
 				40E0D3512B862153003A25AD /* LoginView.swift in Sources */,
 				AE5D85DA2AC8A337009680C6 /* WelcomePageView.swift in Sources */,
 			);
