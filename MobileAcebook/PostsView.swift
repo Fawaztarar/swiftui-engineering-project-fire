@@ -38,7 +38,12 @@ struct PostsPageView: View {
 }
 
 struct PostRowView: View {
-    var post: Post
+    @State private var newComment: String = ""
+    @State private var post: Post
+    
+    init(post: Post) {
+        _post = State(initialValue: post)
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -59,26 +64,36 @@ struct PostRowView: View {
                 Text("\(post.likes)")
                 Spacer()
                 Button(action: {
-                    // comments logic
                 }) {
                     Image(systemName: "text.bubble")
                 }
             }
+            HStack {
+                TextField("Add a comment", text: $newComment)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                Button(action: {
+                    post.addComment(comment: newComment)
+                    newComment = ""
+                }) {
+                    Text("Post Comment")
+                }
+            }
+            ForEach(post.comments, id: \.self) {comment in Text(comment)}
+            .padding()
+            .border(Color.gray, width: 1)
         }
-        .padding()
-        .border(Color.gray, width: 1)
     }
-}
-
-struct PostsPageView_Previews: PreviewProvider {
-    static var previews: some View {
-        let mockPosts: [Post] = [
-            Post(username: "user1", image: "image1", caption: "This is the first post."),
-            Post(username: "user2", image: "image2", caption: "I've posted on an app!"),
-            Post(username: "user3", image: "image3", caption: "Just chilling."),
-        ]
-        
-        return PostsPageView(posts: mockPosts)
+    
+    struct PostsPageView_Previews: PreviewProvider {
+        static var previews: some View {
+            let mockPosts: [Post] = [
+                Post(username: "user1", image: "image1", caption: "This is the first post."),
+                Post(username: "user2", image: "image2", caption: "I've posted on an app!"),
+                Post(username: "user3", image: "image3", caption: "Just chilling."),
+            ]
             
+            return PostsPageView(posts: mockPosts)
+            
+        }
     }
 }
