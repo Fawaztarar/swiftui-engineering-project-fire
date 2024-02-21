@@ -85,7 +85,7 @@ struct LoginView: View {
                             
 //                          navigation just work if isActive = true(isLoggedIn)
                             NavigationLink(isActive: $isLoggedIn) {
-                                Text("Logado")
+                                Text("Successful")
                             } label: {
                                 VStack {
                                     Button {
@@ -115,8 +115,8 @@ struct LoginView: View {
                                     
                                 }
                             }
-                            NavigationLink(destination: Text("Signup")) {
-                                Text("Create new accoutn")
+                            NavigationLink(destination: SignUpView()) {
+                                Text("Create new account")
                                     .frame(width: 300, height: 20)
                                     .foregroundColor(Color("facebookBlue"))
                                     .font(.title2)
