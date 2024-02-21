@@ -22,7 +22,7 @@ struct UserProfileView: View {
                         .clipped()
                     
                     HStack {
-                        Image("profile4.png") // Placeholder for profile photo
+                        Image("profile1") // Placeholder for profile photo
                             .resizable()
                             .scaledToFill()
                             .frame(width: 120, height: 120)
