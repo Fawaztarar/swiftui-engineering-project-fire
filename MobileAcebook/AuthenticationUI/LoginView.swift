@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct LoginView: View {
+struct LoginView2: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var isLoginSuccessful = true // Assuming login is successful by default

@@ -13,7 +13,7 @@ struct WelcomePageView: View {
             VStack {
                 Spacer()
 
-                Text("Welcome to Acebook!")
+                Text("Welcome to Acebook")
                     .font(.largeTitle)
                     .padding(.bottom, 20)
                     .accessibilityIdentifier("welcomeText")
