@@ -49,7 +49,7 @@ struct PostRowView: View {
             Image(post.image)
                 .resizable()
                 .scaledToFit()
-                .frame(height: 200)
+                .frame(height: 100)
             HStack {
                 Button(action: {
                     // like logic
