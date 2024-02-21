@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4ABE0D672B84C3FE0052913B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABE0D662B84C3FE0052913B /* LoginViewModel.swift */; };
+		4ABE0D692B84C40B0052913B /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABE0D682B84C40B0052913B /* LoginModel.swift */; };
+		4ABE0D6B2B84C4190052913B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABE0D6A2B84C4190052913B /* LoginView.swift */; };
+		4ABE0D702B84F9810052913B /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABE0D6F2B84F9810052913B /* TokenModel.swift */; };
 		566BEF592B84D62100BDE2A8 /* SignUpPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566BEF582B84D62100BDE2A8 /* SignUpPageView.swift */; };
 		566BEF5B2B84DEE800BDE2A8 /* ColourExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566BEF5A2B84DEE800BDE2A8 /* ColourExtension.swift */; };
 		56B12F8D2B861FE000C0CE68 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B12F8C2B861FE000C0CE68 /* SignupModel.swift */; };
@@ -43,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4ABE0D662B84C3FE0052913B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		4ABE0D682B84C40B0052913B /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		4ABE0D6A2B84C4190052913B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4ABE0D6F2B84F9810052913B /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		566BEF582B84D62100BDE2A8 /* SignUpPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPageView.swift; sourceTree = "<group>"; };
 		566BEF5A2B84DEE800BDE2A8 /* ColourExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourExtension.swift; sourceTree = "<group>"; };
 		56B12F8C2B861FE000C0CE68 /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
@@ -89,6 +97,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4ABE0D652B84C3B50052913B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4ABE0D662B84C3FE0052913B /* LoginViewModel.swift */,
+				4ABE0D682B84C40B0052913B /* LoginModel.swift */,
+				4ABE0D6A2B84C4190052913B /* LoginView.swift */,
+				4ABE0D6F2B84F9810052913B /* TokenModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		56B12F8B2B86144000C0CE68 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +141,7 @@
 		AE5D85AE2AC8A221009680C6 /* MobileAcebook */ = {
 			isa = PBXGroup;
 			children = (
+				4ABE0D652B84C3B50052913B /* Login */,
 				56B12F8B2B86144000C0CE68 /* Signup */,
 				AE5D85E42AC9B060009680C6 /* Protocols */,
 				AE5D85DF2AC9AF83009680C6 /* Models */,
@@ -325,13 +345,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE5D85E12AC9AFA9009680C6 /* AuthenticationService.swift in Sources */,
+				4ABE0D692B84C40B0052913B /* LoginModel.swift in Sources */,
 				AE5D85E62AC9B077009680C6 /* AuthenticationServiceProtocol.swift in Sources */,
+				4ABE0D702B84F9810052913B /* TokenModel.swift in Sources */,
+				4ABE0D672B84C3FE0052913B /* LoginViewModel.swift in Sources */,
 				AE5D85B02AC8A221009680C6 /* MobileAcebookApp.swift in Sources */,
 				56B12F8D2B861FE000C0CE68 /* SignupModel.swift in Sources */,
 				566BEF592B84D62100BDE2A8 /* SignUpPageView.swift in Sources */,
 				566BEF5B2B84DEE800BDE2A8 /* ColourExtension.swift in Sources */,
 				56B12F912B86493600C0CE68 /* SignupViewModel.swift in Sources */,
 				AE5D85E82AC9B29A009680C6 /* User.swift in Sources */,
+				4ABE0D6B2B84C4190052913B /* LoginView.swift in Sources */,
 				AE5D85DA2AC8A337009680C6 /* WelcomePageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
