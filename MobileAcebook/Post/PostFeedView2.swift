@@ -75,7 +75,7 @@ struct StatusUpdateView3: View {
             Button(action: {
                 // Implement the action to choose a photo
             }) {
-                Image(systemName: "profile1")
+                Image(systemName: "photo")
             }
             .foregroundColor(.white)
             .padding(.trailing, 10)
