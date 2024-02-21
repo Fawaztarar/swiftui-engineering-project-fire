@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		408862E72B865BBC00646C25 /* PostFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408862E62B865BBC00646C25 /* PostFeedView.swift */; };
+		408862EC2B86A3E700646C25 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408862EB2B86A3E700646C25 /* CreatePostView.swift */; };
+		408862F22B86B59800646C25 /* FacebookPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408862F12B86B59800646C25 /* FacebookPostView.swift */; };
+		408862F42B86BF6600646C25 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408862F32B86BF6600646C25 /* TopBarView.swift */; };
+		408862F62B86C05100646C25 /* StatusUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408862F52B86C05100646C25 /* StatusUpdateView.swift */; };
 		40E03D3D2B8626860086060B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E03D3C2B8626860086060B /* ContentView.swift */; };
 		40E0D3432B86206E003A25AD /* AuthenticationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0D3422B86206E003A25AD /* AuthenticationServiceProtocol.swift */; };
 		40E0D34F2B86210D003A25AD /* signUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0D34E2B86210D003A25AD /* signUpView.swift */; };
@@ -47,6 +51,10 @@
 
 /* Begin PBXFileReference section */
 		408862E62B865BBC00646C25 /* PostFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFeedView.swift; sourceTree = "<group>"; };
+		408862EB2B86A3E700646C25 /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
+		408862F12B86B59800646C25 /* FacebookPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookPostView.swift; sourceTree = "<group>"; };
+		408862F32B86BF6600646C25 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
+		408862F52B86C05100646C25 /* StatusUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusUpdateView.swift; sourceTree = "<group>"; };
 		40E03D3C2B8626860086060B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		40E0D3422B86206E003A25AD /* AuthenticationServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationServiceProtocol.swift; path = ../../../Acebook/Acebook/Protocols/AuthenticationServiceProtocol.swift; sourceTree = "<group>"; };
 		40E0D3452B86208A003A25AD /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
@@ -134,8 +142,12 @@
 		40E0D3522B862191003A25AD /* Post */ = {
 			isa = PBXGroup;
 			children = (
-				40E0D3532B8621AD003A25AD /* UserProfileView2.swift */,
 				408862E62B865BBC00646C25 /* PostFeedView.swift */,
+				408862EB2B86A3E700646C25 /* CreatePostView.swift */,
+				40E0D3532B8621AD003A25AD /* UserProfileView2.swift */,
+				408862F52B86C05100646C25 /* StatusUpdateView.swift */,
+				408862F32B86BF6600646C25 /* TopBarView.swift */,
+				408862F12B86B59800646C25 /* FacebookPostView.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -393,6 +405,8 @@
 			files = (
 				40E0D3542B8621AD003A25AD /* UserProfileView2.swift in Sources */,
 				40E0D34F2B86210D003A25AD /* signUpView.swift in Sources */,
+				408862EC2B86A3E700646C25 /* CreatePostView.swift in Sources */,
+				408862F62B86C05100646C25 /* StatusUpdateView.swift in Sources */,
 				408862E72B865BBC00646C25 /* PostFeedView.swift in Sources */,
 				40E0D3432B86206E003A25AD /* AuthenticationServiceProtocol.swift in Sources */,
 				4ABE0D692B84C40B0052913B /* LoginModel.swift in Sources */,
@@ -400,8 +414,10 @@
 				40E03D3D2B8626860086060B /* ContentView.swift in Sources */,
 				4ABE0D702B84F9810052913B /* TokenModel.swift in Sources */,
 				4ABE0D672B84C3FE0052913B /* LoginViewModel.swift in Sources */,
+				408862F42B86BF6600646C25 /* TopBarView.swift in Sources */,
 				AE5D85B02AC8A221009680C6 /* MobileAcebookApp.swift in Sources */,
 				4ABE0D6B2B84C4190052913B /* LoginView.swift in Sources */,
+				408862F22B86B59800646C25 /* FacebookPostView.swift in Sources */,
 				AE5D85DA2AC8A337009680C6 /* WelcomePageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
