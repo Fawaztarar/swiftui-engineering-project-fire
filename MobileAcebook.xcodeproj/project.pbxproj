@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		40E03D3D2B8626860086060B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E03D3C2B8626860086060B /* ContentView.swift */; };
+		40E03D452B863CF00086060B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E03D442B863CF00086060B /* NetworkManager.swift */; };
 		40E0D3432B86206E003A25AD /* AuthenticationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0D3422B86206E003A25AD /* AuthenticationServiceProtocol.swift */; };
 		40E0D34F2B86210D003A25AD /* signUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0D34E2B86210D003A25AD /* signUpView.swift */; };
 		40E0D3512B862153003A25AD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0D3502B862153003A25AD /* LoginView.swift */; };
 		40E0D3542B8621AD003A25AD /* UserProfileView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0D3532B8621AD003A25AD /* UserProfileView2.swift */; };
-		40E0D3582B8624AA003A25AD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0D3572B8624AA003A25AD /* NetworkManager.swift */; };
 		AE5D85B02AC8A221009680C6 /* MobileAcebookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D85AF2AC8A221009680C6 /* MobileAcebookApp.swift */; };
 		AE5D85B42AC8A224009680C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE5D85B32AC8A224009680C6 /* Assets.xcassets */; };
 		AE5D85B72AC8A224009680C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE5D85B62AC8A224009680C6 /* Preview Assets.xcassets */; };
@@ -43,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		40E03D3C2B8626860086060B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		40E03D442B863CF00086060B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		40E0D3422B86206E003A25AD /* AuthenticationServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationServiceProtocol.swift; path = ../../../Acebook/Acebook/Protocols/AuthenticationServiceProtocol.swift; sourceTree = "<group>"; };
 		40E0D3452B86208A003A25AD /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		40E0D3462B86208A003A25AD /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		40E0D34E2B86210D003A25AD /* signUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpView.swift; sourceTree = "<group>"; };
 		40E0D3502B862153003A25AD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		40E0D3532B8621AD003A25AD /* UserProfileView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView2.swift; sourceTree = "<group>"; };
-		40E0D3572B8624AA003A25AD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		40F29B542B8617EF008D944B /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		40F29B552B8617EF008D944B /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		40F29B562B8617EF008D944B /* TokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStorage.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 		40F29B4C2B8616E7008D944B /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
-				40E0D3572B8624AA003A25AD /* NetworkManager.swift */,
+				40E03D442B863CF00086060B /* NetworkManager.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -372,8 +372,8 @@
 				40E0D3542B8621AD003A25AD /* UserProfileView2.swift in Sources */,
 				40E0D34F2B86210D003A25AD /* signUpView.swift in Sources */,
 				40E0D3432B86206E003A25AD /* AuthenticationServiceProtocol.swift in Sources */,
-				40E0D3582B8624AA003A25AD /* NetworkManager.swift in Sources */,
 				40E03D3D2B8626860086060B /* ContentView.swift in Sources */,
+				40E03D452B863CF00086060B /* NetworkManager.swift in Sources */,
 				AE5D85B02AC8A221009680C6 /* MobileAcebookApp.swift in Sources */,
 				40E0D3512B862153003A25AD /* LoginView.swift in Sources */,
 				AE5D85DA2AC8A337009680C6 /* WelcomePageView.swift in Sources */,
