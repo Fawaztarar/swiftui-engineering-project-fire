@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-// Model for a Post
 struct Post: Identifiable {
     var id = UUID()
     var username: String
@@ -92,16 +91,16 @@ struct PostRowView: View {
     }
 }
 
-    
-    struct PostsPageView_Previews: PreviewProvider {
-        static var previews: some View {
-            let mockPosts: [Post] = [
-                Post(username: "user1", image: "image1", caption: "This is the first post."),
-                Post(username: "user2", image: "image2", caption: "I've posted on an app!"),
-                Post(username: "user3", image: "image3", caption: "Just chilling."),
-            ]
-            
-            return PostsPageView(posts: mockPosts)
-            
-        }
+
+struct PostsPageView_Previews: PreviewProvider {
+    static var previews: some View {
+        let mockPosts: [Post] = [
+            Post(username: "user1", image: "image1", caption: "This is the first post."),
+            Post(username: "user2", image: "image2", caption: "I've posted on an app!"),
+            Post(username: "user3", image: "image3", caption: "Just chilling."),
+        ]
+        
+        return PostsPageView(posts: mockPosts)
+        
     }
+}
