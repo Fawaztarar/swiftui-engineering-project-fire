@@ -21,10 +21,12 @@ struct FeedView: View {
     var body: some View {
         NavigationView {
             HStack {
+                .background(Color(UIColor.lightGray))
                 
                 
                     TextField("What are you thinking? ...", text: $message)
                     .position(x: 150, y: 80)
+                
 
     
                     
