@@ -14,12 +14,15 @@ struct SignUpPageView: View {
     @State private var userCreatedError = false
     @ObservedObject var signupViewModel = SignupViewModel()
     
+
     var body: some View {
+        
         NavigationView {
+            NavigationStack{
             ZStack(alignment: .center) {
                 Color("backgroudBlue")
                 
-                VStack (spacing: 80){
+                VStack(spacing: 80) {
                     Spacer()
                         .frame(height: 10)
                     
@@ -27,7 +30,10 @@ struct SignUpPageView: View {
                         .resizable()
                         .frame(width: 100, height: 100)
                     
-                    VStack(spacing: 30) {
+                    
+                    VStack(spacing: 30){
+                        
+                        
                         
                         VStack {
                             
@@ -43,13 +49,14 @@ struct SignUpPageView: View {
                                 
                                 TextField("What is your email?", text: $email)
                                     .textFieldStyle(PlainTextFieldStyle())
-                                    .colorScheme(.dark)
+                                        .colorScheme(.dark)
                                     .keyboardType(.emailAddress)
                                     .frame(width: 320, height: 60)
                                     .textInputAutocapitalization(.never)
                                     .foregroundColor(Color("white"))
                                     .padding(.horizontal, 10)
                             }
+                            
                             
                             ZStack {
                                 Rectangle()
@@ -60,55 +67,106 @@ struct SignUpPageView: View {
                                         RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color("grayBorder"), lineWidth: 1)
                                     )
-                                SecureField("What is your Password", text: $password)
+                                SecureField("What is your password?", text: $password)
                                     .textFieldStyle(PlainTextFieldStyle())
-                                    .colorScheme(.dark)
+                                        .colorScheme(.dark)
                                     .textInputAutocapitalization(.never)
                                     .frame(width: 320, height: 40)
                                     .foregroundColor(Color("white"))
                                     .padding(.horizontal, 10)
                             }
                             
-                            VStack(spacing: 170) {
-                                
-                                NavigationLink(isActive: $userCreated) {
-                                    Text("Submit")
-                                } label: {
-                                    VStack {
-                                        Button {
-                                            Task {
-                                                let userCreatedResult = await signupViewModel.login(email: email, password: password)
-                                                
-                                                if userCreatedResult {
-                                                    userCreated = true
-                                                } else {
-                                                    userCreatedError = true
-                                                }
-                                                
+                        }
+                        
+                        VStack(spacing: 170) {
+                            
+                                VStack {
+                                    Button {
+                                        Task {
+
+                                            let userCreatedResult = await signupViewModel.createUser(email: email, password: password)
+
+                                            if userCreatedResult {
+                                                userCreated = true
+
+                                            } else {
+                                                userCreatedError = true
                                             }
-                                        } label: {
-                                            Text("Create user")
-                                                .frame(width: 300, height: 20)
-                                                .foregroundColor(Color("white"))
-                                                .font(.title2)
-                                                .padding()
-                                                .background(Color("facebookBlue"))
-                                                .clipShape(Capsule())
+                                            
                                         }
+                                    } label: {
+                                        Text("Add an avatar")
+                                            .frame(width: 300, height: 20)
+                                            .foregroundColor(Color("white"))
+                                            .font(.title2)
+                                            .padding()
+                                            .background(Color("facebookBlue"))
+                                            .clipShape(Capsule())
                                     }
+                                   
+                                    }
+                                .navigationDestination(isPresented: $userCreated){
+                                    Text("")
+                                    
                                 }
-                                
+                            
+                            }
+                        VStack(spacing: 170) {
+                            
+                                VStack {
+                                    Button {
+                                        Task {
+
+                                            let userCreatedResult = await signupViewModel.createUser(email: email, password: password)
+
+                                            if userCreatedResult {
+                                                userCreated = true
+
+                                            } else {
+                                                userCreatedError = true
+                                            }
+                                            
+                                        }
+                                    } label: {
+                                        
+                                Text("Create user")
+                                    .frame(width: 300, height: 20)
+                                    .foregroundColor(Color("facebookBlue"))
+                                    .font(.title2)
+                                    .padding()
+                                    .background(Color("backgroudBlue"))
+                                    .clipShape(Capsule())
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 50)
+                                            .stroke(Color("facebookBlue"), lineWidth: 1)
+                                    )
+                                    }
+                                   
+                                    }
+                                .navigationDestination(isPresented: $userCreated){
+                                    Text("User created")
+                                    
+                                }
+                            
                             }
                         }
                     }
+                    
                 }
+            .ignoresSafeArea()
             }
-                .navigationBarHidden(true)
-                .ignoresSafeArea()
+            
+            .navigationBarHidden(true)
+            .alert(isPresented: $userCreatedError) {
+                Alert(title: Text("Error"),
+                      message: Text("Log in error. Try again"),
+                      dismissButton: .default(Text("Ok")))
+            }
+            
         }
+        
     }
 }
-
 #Preview {
     SignUpPageView()
 }
