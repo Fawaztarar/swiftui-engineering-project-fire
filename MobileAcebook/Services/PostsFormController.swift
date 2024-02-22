@@ -9,13 +9,7 @@ import Foundation
 import UIKit
 
 
-struct PostData: Codable {
-    let message: String
-    let image: String
-    let createdBy: String
-    let likes: [String]
-    let comments: Int
-}
+
 
 enum APIError: Error {
     case responseProblem
@@ -24,31 +18,20 @@ enum APIError: Error {
 }
 
 
-class APIRequest {
-    
+class PostViewModel: ObservableObject {
     
     let url = URL(string: "http://127.0.0.1:8080/posts")!
     
-    
-    //    private func serializeData(postData: PostData) -> Data? {
-    //        let encoder = JSONEncoder()
-
-    //        do {
-    //            let jsonData = try encoder.encode(postData)
-    //            return jsonData
-    //        } catch {
-    //            print("Error encoding data: \(error.localizedDescription)")
-    //            return nil
-    //        }
-    //    }
-    
-    func executeUpload(_ messageToSave: Message, completion: @escaping(Result<Message, APIError>) -> Void) {
+    func executeUpload(messagetoSave: String,  completion: @escaping(Result<PostData, APIError>) -> Void) {
         
         do {
+            // post request to given postposts POST request
+            
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.httpBody = try JSONEncoder().encode(messageToSave)
+            request.httpBody = try JSONEncoder().encode(messagetoSave)
+            print("message", request)
             
             let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
                 guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let jsonData = data else {
@@ -58,7 +41,7 @@ class APIRequest {
                 
                 do {
                     // catch errors from JSON decoder
-                    let messageData = try JSONDecoder().decode(Message.self, from: jsonData)
+                    let messageData = try JSONDecoder().decode(PostData.self, from: jsonData)
                     completion(.success(messageData))
                 } catch {
                     completion(.failure(.decodingProblem))

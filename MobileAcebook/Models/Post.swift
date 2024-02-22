@@ -16,14 +16,10 @@ struct FormSection: Identifiable {
 
 // codable so that we can receive things and send things to an api
 
-final class Message: Codable {
-    
-    var id = UUID()
-    var message: String
-    var image: String?
-    
-    init(message: String, image: String) {
-        self.message = message
-        self.image = image
-    }
+struct PostData: Codable {
+    let message: String
+    let image: String
+    let createdBy: String
+    let likes: [String]
+    let comments: Int
 }
