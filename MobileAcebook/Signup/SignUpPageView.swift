@@ -106,7 +106,8 @@ struct SignUpPageView: View {
                                    
                                     }
                                 .navigationDestination(isPresented: $userCreated){
-                                    Text("")
+                                    // add avatar functionality here
+                                    LoginView()
                                     
                                 }
                             
@@ -144,8 +145,13 @@ struct SignUpPageView: View {
                                    
                                     }
                                 .navigationDestination(isPresented: $userCreated){
-                                    Text("User created")
+                                    LoginView()
                                     
+                                }
+                                .alert(isPresented: $userCreatedError) {
+                                    Alert(title: Text("Error"),
+                                          message: Text("Please enter valid login details"),
+                                          dismissButton: .default(Text("Ok")))
                                 }
                             
                             }
@@ -157,11 +163,7 @@ struct SignUpPageView: View {
             }
             
             .navigationBarHidden(true)
-            .alert(isPresented: $userCreatedError) {
-                Alert(title: Text("Error"),
-                      message: Text("Log in error. Try again"),
-                      dismissButton: .default(Text("Ok")))
-            }
+            
             
         }
         

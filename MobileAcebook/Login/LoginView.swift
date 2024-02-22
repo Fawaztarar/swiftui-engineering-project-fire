@@ -116,8 +116,8 @@ struct LoginView: View {
                                 }
                             
                             }
-                            NavigationLink(destination: Text("Signup")) {
-                                Text("Create new accoutn")
+                            NavigationLink(destination: SignUpPageView()) {
+                                Text("Create new account")
                                     .frame(width: 300, height: 20)
                                     .foregroundColor(Color("facebookBlue"))
                                     .font(.title2)

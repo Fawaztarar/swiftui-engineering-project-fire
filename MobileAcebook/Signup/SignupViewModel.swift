@@ -28,6 +28,12 @@ class SignupViewModel: ObservableObject {
             return false
         }
         
+        if let httpResponse = response.1 as? HTTPURLResponse {
+            if httpResponse.statusCode != 201 {
+                return false
+            }
+        }
+        
         // if successful return true
         return true
     }
