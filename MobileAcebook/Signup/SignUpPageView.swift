@@ -10,11 +10,14 @@ import SwiftUI
 struct SignUpPageView: View {
     @State private var email = ""
     @State private var password = ""
+    @State private var userCreated = false
+    @State private var userCreatedError = false
+    @ObservedObject var signupViewModel = SignupViewModel()
     
     var body: some View {
         NavigationView {
-            ZStack {
-                Color("backgroundBlue")
+            ZStack(alignment: .center) {
+                Color("backgroudBlue")
                 
                 VStack (spacing: 80){
                     Spacer()
@@ -40,7 +43,7 @@ struct SignUpPageView: View {
                                 
                                 TextField("What is your email?", text: $email)
                                     .textFieldStyle(PlainTextFieldStyle())
-                                        .colorScheme(.dark)
+                                    .colorScheme(.dark)
                                     .keyboardType(.emailAddress)
                                     .frame(width: 320, height: 60)
                                     .textInputAutocapitalization(.never)
@@ -59,30 +62,49 @@ struct SignUpPageView: View {
                                     )
                                 SecureField("What is your Password", text: $password)
                                     .textFieldStyle(PlainTextFieldStyle())
-                                        .colorScheme(.dark)
+                                    .colorScheme(.dark)
                                     .textInputAutocapitalization(.never)
                                     .frame(width: 320, height: 40)
                                     .foregroundColor(Color("white"))
                                     .padding(.horizontal, 10)
                             }
+                            
+                            VStack(spacing: 170) {
+                                
+                                NavigationLink(isActive: $userCreated) {
+                                    Text("Submit")
+                                } label: {
+                                    VStack {
+                                        Button {
+                                            Task {
+                                                let userCreatedResult = await signupViewModel.login(email: email, password: password)
+                                                
+                                                if userCreatedResult {
+                                                    userCreated = true
+                                                } else {
+                                                    userCreatedError = true
+                                                }
+                                                
+                                            }
+                                        } label: {
+                                            Text("Create user")
+                                                .frame(width: 300, height: 20)
+                                                .foregroundColor(Color("white"))
+                                                .font(.title2)
+                                                .padding()
+                                                .background(Color("facebookBlue"))
+                                                .clipShape(Capsule())
+                                        }
+                                    }
+                                }
+                                
+                            }
                         }
                     }
-                    
-                   .listStyle(PlainListStyle())
-                    .scrollContentBackground(.hidden)
-                    
-                    Button("Add avatar") {
-                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                    }
-                    .padding(.bottom, 100)
-                    
-                    Button("Sign up without and avatar") {
-                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                    }
-                    .padding(.bottom, 100)
                 }
-               
             }
+                .navigationBarHidden(true)
+                .ignoresSafeArea()
         }
     }
 }
