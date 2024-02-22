@@ -33,6 +33,21 @@ struct WelcomePageView: View {
                 
                 NavigationLink("Log In", destination: LoginView())
                     .padding()
+                    
+                
+                NavigationLink("Post Feed View", destination: PostFeedView())
+                    
+                
+                NavigationLink("PostView", destination: FacebookPostView())
+                    
+                
+                NavigationLink("Create PostView", destination: CreatePostView())
+                
+                
+                NavigationLink("UserProfile View", destination: UserProfileView())
+                    
+                
+                
 
                 Spacer()
             }

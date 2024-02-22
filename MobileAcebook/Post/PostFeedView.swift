@@ -18,6 +18,7 @@ struct PostFeedView: View {
             
             ScrollView {
                 VStack(spacing: 10) {
+                    
                     StatusUpdateView()
                     
                     ForEach(0..<5) { _ in

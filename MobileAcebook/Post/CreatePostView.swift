@@ -71,13 +71,14 @@ struct CreatePostView: View {
                 .frame(width: 50, height: 50)
                 .clipShape(Circle())
             
-            Text("Fawaz Tarar") // Replace with dynamic user name
+            Text("Tarar Fawaz") // Replace with dynamic user name
                 .fontWeight(.semibold)
             
             Spacer()
             
             HStack(spacing: 5) {
-                Label("Public", systemImage: "globe")
+                
+                
                 Label("Album", systemImage: "photo.on.rectangle")
                 Image(systemName: "location.slash.fill")
             }
