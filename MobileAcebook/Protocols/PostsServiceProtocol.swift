@@ -11,6 +11,4 @@ protocol PostFormServiceProtocol {
     func postFormData(completion: @escaping (Data?, Error?) -> Void)
 }
 
-protocol PostMessageDelegate: AnyObject {
-    func postMessage(_ message: String)
-}
+

@@ -18,8 +18,5 @@ struct FormSection: Identifiable {
 
 struct PostData: Codable {
     let message: String
-    let image: String
-    let createdBy: String
-    let likes: [String]
-    let comments: Int
+    var publicID = UUID()
 }
