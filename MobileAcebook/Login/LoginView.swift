@@ -113,7 +113,6 @@ struct LoginView: View {
                                 .navigationDestination(isPresented: $isLoggedIn){
                                     Text("Logado")
                                     
-                                    
                                 }
                             
                             }
