@@ -86,10 +86,12 @@ struct PostRowView: View {
                 .disabled(newComment.isEmpty)
             }
             ForEach(post.comments, id: \.self) {comment in Text(comment)}
-            .padding()
-            .border(Color.gray, width: 1)
+                .padding()
+                .border(Color.gray, width: 1)
         }
     }
+}
+
     
     struct PostsPageView_Previews: PreviewProvider {
         static var previews: some View {
@@ -103,4 +105,3 @@ struct PostRowView: View {
             
         }
     }
-}
