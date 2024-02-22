@@ -12,6 +12,7 @@
 		408862F22B86B59800646C25 /* FacebookPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408862F12B86B59800646C25 /* FacebookPostView.swift */; };
 		408862F42B86BF6600646C25 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408862F32B86BF6600646C25 /* TopBarView.swift */; };
 		408862F62B86C05100646C25 /* StatusUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408862F52B86C05100646C25 /* StatusUpdateView.swift */; };
+		408862F82B878D9100646C25 /* likePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408862F72B878D9100646C25 /* likePost.swift */; };
 		40E03D3D2B8626860086060B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E03D3C2B8626860086060B /* ContentView.swift */; };
 		40E0D3432B86206E003A25AD /* AuthenticationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0D3422B86206E003A25AD /* AuthenticationServiceProtocol.swift */; };
 		40E0D34F2B86210D003A25AD /* signUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0D34E2B86210D003A25AD /* signUpView.swift */; };
@@ -55,6 +56,7 @@
 		408862F12B86B59800646C25 /* FacebookPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookPostView.swift; sourceTree = "<group>"; };
 		408862F32B86BF6600646C25 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 		408862F52B86C05100646C25 /* StatusUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusUpdateView.swift; sourceTree = "<group>"; };
+		408862F72B878D9100646C25 /* likePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = likePost.swift; sourceTree = "<group>"; };
 		40E03D3C2B8626860086060B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		40E0D3422B86206E003A25AD /* AuthenticationServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationServiceProtocol.swift; path = ../../../Acebook/Acebook/Protocols/AuthenticationServiceProtocol.swift; sourceTree = "<group>"; };
 		40E0D3452B86208A003A25AD /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				40E0D3572B8624AA003A25AD /* NetworkManager.swift */,
+				408862F72B878D9100646C25 /* likePost.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				408862F62B86C05100646C25 /* StatusUpdateView.swift in Sources */,
 				408862E72B865BBC00646C25 /* PostFeedView.swift in Sources */,
 				40E0D3432B86206E003A25AD /* AuthenticationServiceProtocol.swift in Sources */,
+				408862F82B878D9100646C25 /* likePost.swift in Sources */,
 				4ABE0D692B84C40B0052913B /* LoginModel.swift in Sources */,
 				40E0D3582B8624AA003A25AD /* NetworkManager.swift in Sources */,
 				40E03D3D2B8626860086060B /* ContentView.swift in Sources */,
