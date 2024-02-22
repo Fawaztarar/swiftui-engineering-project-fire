@@ -15,7 +15,9 @@ struct LoginView: View {
     @ObservedObject var loginViewModel = LoginViewModel()
     
     var body: some View {
+        
         NavigationView {
+            NavigationStack{
             ZStack(alignment: .center) {
                 Color("backgroudBlue")
                 
@@ -92,12 +94,12 @@ struct LoginView: View {
                                 VStack {
                                     Button {
                                         Task {
-//                                            call funcion "login" using this datas
+
                                             let loginResult = await loginViewModel.login(email: email, password: password)
-//                                            if pass, go ahead and change isLoggedIn to allowed navigation
+
                                             if loginResult {
                                                 isLoggedIn = true
-//                                                if not, keep isLoggedin = false and set loginError = true
+
                                             } else {
                                                 loginError = true
                                             }
@@ -112,10 +114,13 @@ struct LoginView: View {
                                             .background(Color("facebookBlue"))
                                             .clipShape(Capsule())
                                     }
-                                    
-                                    
+                                   
+                                    }
+                                .navigationDestination(isPresented: $isLoggedIn){
+                                    Text("Logado")
                                     
                                 }
+                            
                             }
                             NavigationLink(destination: SignUpView()) {
                                 Text("Create new account")
@@ -137,18 +142,21 @@ struct LoginView: View {
                     }
                     
                 }
-            }
-            .navigationBarHidden(true)
             .ignoresSafeArea()
-//            pop up just open if loginErro = true (and it start as false)
+            }
+            
+            .navigationBarHidden(true)
             .alert(isPresented: $loginError) {
                 Alert(title: Text("Error"),
                       message: Text("Log in error. Try again"),
                       dismissButton: .default(Text("Ok")))
             }
+            
         }
+        
     }
 }
+
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
