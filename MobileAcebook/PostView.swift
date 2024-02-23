@@ -20,45 +20,50 @@ struct FeedView: View {
     
     init(tokenManager: TokenManager) {
         self.tokenManager = tokenManager
+        self.tokenManager.getToken()
     }
     
     var body: some View {
         NavigationView {
-            HStack {
-                TextField("What are you thinking? ...", text: $message)
-                    .position(x: 150, y: 80)
-                
-                Button(action: {
-                    Task {
-                        do {
-                            guard let token = tokenManager.token?.token else {
-                                print("Token not found")
-                                return
+            ZStack(alignment: .leading) {
+                Color("backgroudBlue")
+                HStack {
+                    TextField("What are you thinking? ...", text: $message)
+                        .colorScheme(.dark)
+                        .foregroundColor(Color("white"))
+                    
+                    
+                    Button(action: {
+                        Task {
+                            do {
+                                guard let token = tokenManager.token?.token else {
+                                    print("Token not found")
+                                    return
+                                    
+                                }
                                 
-                            }
-                            
-                            postViewModel.executeUpload(messagetoSave: message, tokenUse: token) { result in
-                                switch result {
-                                case .success(let message):
-                                    print("The following message has been sent: \(message.message)")
-                                case .failure(let error):
-                                    print("An error occurred: \(error)")
+                                postViewModel.executeUpload(messagetoSave: message, tokenUse: token) { result in
+                                    switch result {
+                                    case .success(let message):
+                                        print("The following message has been sent: \(message.message)")
+                                    case .failure(let error):
+                                        print("An error occurred: \(error)")
+                                    }
                                 }
                             }
                         }
+                    }) {
+                        Text("Post")
                     }
-                }) {
-                    Text("Post")
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.small)
+                    .position(x: 150, y: 20)
                 }
-                .buttonStyle(.borderedProminent)
-                .controlSize(.small)
-                .position(x: 150, y: 20)
             }
+            
         }
-        
     }
 }
-
 struct FeedView_Previews: PreviewProvider {
     static var previews: some View {
         let tokenManager = TokenManager()

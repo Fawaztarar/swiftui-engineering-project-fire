@@ -20,6 +20,7 @@ class TokenManager: ObservableObject {
         if let data = UserDefaults.standard.data(forKey: "token"),
             let token = try? JSONDecoder().decode(TokenModel.self, from: data) {
             self.token = token
+            print("running getToken")
         }
     }
 }
