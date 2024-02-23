@@ -77,10 +77,10 @@ struct PostsPageView: View {
                 Text(post.caption)
                     .font(.subheadline)
                     .foregroundColor(.white)
-//                Image(post.image)
-//                    .resizable()
-//                    .scaledToFit()
-//                    .frame(height: 100)
+                Image(post.image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200,height: 200)
                 HStack {
                     Button(action: {
                         isLiked.toggle()
@@ -132,9 +132,9 @@ struct PostsPageView: View {
     struct PostsPageView_Previews: PreviewProvider {
         static var previews: some View {
            let mockPosts: [Post] = [
-                Post(username: "user1", image: "image1", caption: "This is the first post."),
-                Post(username: "user2", image: "image2", caption: "I've posted on an app!"),
-                Post(username: "user3", image: "image3", caption: "Just chilling."),
+                Post(username: "Kitty", image: "cat", caption: "Meow"),
+                Post(username: "Brick", image: "house", caption: "Look at this house!"),
+                Post(username: "Bob", image: "beach", caption: "Just chilling."),
            ]
             
             return PostsPageView(posts: mockPosts)
