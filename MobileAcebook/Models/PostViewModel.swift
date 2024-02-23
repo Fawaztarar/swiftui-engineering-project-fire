@@ -33,6 +33,7 @@ class PostViewModel: ObservableObject {
                     let decodedPosts = try JSONDecoder().decode([Posts].self, from: data)
                     DispatchQueue.main.async {
                         self.posts = decodedPosts
+                        print(self.posts)
                         print("Updated posts: \(self.posts)")}
                 } catch {
                     print("Error Decoding JSON: \(error)")

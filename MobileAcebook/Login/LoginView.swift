@@ -111,7 +111,13 @@ struct LoginView: View {
                                    
                                     }
                                 .navigationDestination(isPresented: $isLoggedIn){
-                                    Text("Logado")
+                                    let mockPosts: [Post] = [
+                                         Post(username: "user1", image: "image1", caption: "This is the first post."),
+                                         Post(username: "user2", image: "image2", caption: "I've posted on an app!"),
+                                         Post(username: "user3", image: "image3", caption: "Just chilling."),
+                                    ]
+                                     
+                                    PostsPageView(posts: mockPosts)
                                     
                                 }
                             

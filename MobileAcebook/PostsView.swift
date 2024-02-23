@@ -1,5 +1,5 @@
 //
-//  PostView.swift
+//  PostsView.swift
 //  MobileAcebook
 //
 //  Created by Reece Owen on 20/02/2024.
@@ -27,6 +27,7 @@ struct Post: Identifiable {
 }
 
 struct PostsPageView: View {
+    @ObservedObject var postViewModel = PostViewModel()
     var posts: [Post]
     var body: some View {
         NavigationView {
@@ -48,95 +49,96 @@ struct PostsPageView: View {
                         
                         List(posts) { post in
                             PostRowView(post: post)
+                        } .onAppear{
+                            postViewModel.post()
                         }
                     }
+                    .navigationBarHidden(true)
                 }
-                .navigationBarHidden(true)
             }
         }
     }
 }
-
-struct PostRowView: View {
-    @State private var newComment: String = ""
-    @State private var post: Post
-    @State private var isLiked: Bool = false
     
-    init(post: Post) {
-        _post = State(initialValue: post)
-    }
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text(post.username)
-                .font(.headline)
-                .foregroundColor(.white)
-            Text(post.caption)
-                .font(.subheadline)
-                .foregroundColor(.white)
-            Image(post.image)
-                .resizable()
-                .scaledToFit()
-                .frame(height: 100)
-            HStack {
-                Button(action: {
-                    isLiked.toggle()
-                    if isLiked {
-                        post.addLike()
-                    } else {
-                        post.likes -= 1
-                    }
-                }) {
-                    Image(systemName: isLiked ? "heart.fill": "heart")
-                        .foregroundColor(isLiked ? .red : .white)
-                }
-                Text("\(post.likes)")
+    struct PostRowView: View {
+        @State private var newComment: String = ""
+        @State private var post: Post
+        @State private var isLiked: Bool = false
+        
+        init(post: Post) {
+            _post = State(initialValue: post)
+        }
+        
+        var body: some View {
+            VStack(alignment: .leading) {
+                Text(post.username)
+                    .font(.headline)
                     .foregroundColor(.white)
-                Spacer()
-                Button(action: {
-                }) {
-                    Image(systemName: "text.bubble")
+                Text(post.caption)
+                    .font(.subheadline)
+                    .foregroundColor(.white)
+//                Image(post.image)
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(height: 100)
+                HStack {
+                    Button(action: {
+                        isLiked.toggle()
+                        if isLiked {
+                            post.addLike()
+                        } else {
+                            post.likes -= 1
+                        }
+                    }) {
+                        Image(systemName: isLiked ? "heart.fill": "heart")
+                            .foregroundColor(isLiked ? .red : .white)
+                    }
+                    Text("\(post.likes)")
                         .foregroundColor(.white)
+                    Spacer()
+                    Button(action: {
+                    }) {
+                        Image(systemName: "text.bubble")
+                            .foregroundColor(.white)
+                    }
                 }
-            }
-            HStack {
-                TextField("Add a comment", text: $newComment)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                Button(action: {
-                    post.addComment(comment: newComment)
-                    newComment = ""
-                }) {
-                    Text("Post Comment")
-                        .foregroundColor(.white)
+                HStack {
+                    TextField("Add a comment", text: $newComment)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Button(action: {
+                        post.addComment(comment: newComment)
+                        newComment = ""
+                    }) {
+                        Text("Post Comment")
+                            .foregroundColor(.white)
+                    }
+                    .disabled(newComment.isEmpty)
                 }
-                .disabled(newComment.isEmpty)
+                ForEach(post.comments, id: \.self) {comment in Text(comment)}
+                    .foregroundColor(post.isPosted ? .white : .black)
+                    .padding()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.gray, lineWidth: 1))
             }
-            ForEach(post.comments, id: \.self) {comment in Text(comment)}
-                .foregroundColor(post.isPosted ? .white : .black)
-                .padding()
-                .overlay(
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(Color.gray, lineWidth: 1))
+            .padding()
+            .background(Color("darkBlueButton"))
+            .cornerRadius(10)
+            .padding()
         }
-        .padding()
-        .background(Color("darkBlueButton"))
-        .cornerRadius(10)
-        .padding()
     }
-}
-
-
-struct PostsPageView_Previews: PreviewProvider {
-    static var previews: some View {
-        let mockPosts: [Post] = [
-            Post(username: "user1", image: "image1", caption: "This is the first post."),
-            Post(username: "user2", image: "image2", caption: "I've posted on an app!"),
-            Post(username: "user3", image: "image3", caption: "Just chilling."),
-        ]
-        
-        return PostsPageView(posts: mockPosts)
-        
+    
+    
+    struct PostsPageView_Previews: PreviewProvider {
+        static var previews: some View {
+           let mockPosts: [Post] = [
+                Post(username: "user1", image: "image1", caption: "This is the first post."),
+                Post(username: "user2", image: "image2", caption: "I've posted on an app!"),
+                Post(username: "user3", image: "image3", caption: "Just chilling."),
+           ]
+            
+            return PostsPageView(posts: mockPosts)
+            
+        }
     }
-}
-
 
