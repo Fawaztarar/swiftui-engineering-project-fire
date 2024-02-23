@@ -8,6 +8,11 @@
 import Foundation
 
 class LoginViewModel: ObservableObject {
+    let tokenManager: TokenManager
+    
+    init(tokenManager: TokenManager) {
+        self.tokenManager = tokenManager
+    }
     
     
     func login(email: String, password: String) async -> Bool {
@@ -31,18 +36,24 @@ class LoginViewModel: ObservableObject {
         guard let token = try? JSONDecoder().decode(TokenModel.self, from: response.0) else{
             return false
         }
-
+        
         print(token.token)
-        saveToken(token: token)
+        tokenManager.saveToken(token: token)
         return true
+
+//        print(token.token)
+//        saveToken(token: token)
+//        return true
         
     }
     
-    func saveToken(token: TokenModel) {
-        let tokenStore = UserDefaults.standard
-        guard let encoded = try? JSONEncoder().encode(token) else {return}
-        tokenStore.setValue(encoded, forKey: "token")
-    }
+    
+//
+//    func saveToken(token: TokenModel) {
+//        let tokenStore = UserDefaults.standard
+//        guard let encoded = try? JSONEncoder().encode(token) else {return}
+//        tokenStore.setValue(encoded, forKey: "token")
+//    }
 }
 
 

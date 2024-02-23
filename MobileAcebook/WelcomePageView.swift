@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+let tokenManager = TokenManager()
+let loginViewModel = LoginViewModel(tokenManager: tokenManager)
+let feedView = FeedView(tokenManager: tokenManager)
+
+// Now you can pass loginViewModel and feedView to your SwiftUI hierarchy
+
+
 struct WelcomePageView: View {
     var body: some View {
         ZStack {

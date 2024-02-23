@@ -12,7 +12,7 @@ struct LoginView: View {
     @State var password = ""
     @State var isLoggedIn = false
     @State var loginError = false
-    @ObservedObject var loginViewModel = LoginViewModel()
+    @ObservedObject var loginViewModel = LoginViewModel(tokenManager: tokenManager)
     
     var body: some View {
         
@@ -111,7 +111,7 @@ struct LoginView: View {
                                    
                                     }
                                 .navigationDestination(isPresented: $isLoggedIn){
-                                    Text("Logado")
+                                    FeedView(tokenManager: loginViewModel.tokenManager)
                                     
                                 }
                             

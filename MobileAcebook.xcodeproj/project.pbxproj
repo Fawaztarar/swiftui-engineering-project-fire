@@ -25,8 +25,9 @@
 		AE5D85E82AC9B29A009680C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D85E72AC9B29A009680C6 /* User.swift */; };
 		E648FC9D2B84FFA8005D59E6 /* PostsFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E648FC9C2B84FFA8005D59E6 /* PostsFormController.swift */; };
 		E648FC9F2B850019005D59E6 /* PostsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E648FC9E2B850018005D59E6 /* PostsServiceProtocol.swift */; };
-		E648FCA32B85FF60005D59E6 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E648FCA22B85FF60005D59E6 /* FeedView.swift */; };
+		E648FCA32B85FF60005D59E6 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E648FCA22B85FF60005D59E6 /* PostView.swift */; };
 		E648FCA52B860CDE005D59E6 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E648FCA42B860CDE005D59E6 /* Post.swift */; };
+		E648FCA72B88A0FA005D59E6 /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E648FCA62B88A0FA005D59E6 /* AuthenticationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +69,9 @@
 		AE5D85E72AC9B29A009680C6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E648FC9C2B84FFA8005D59E6 /* PostsFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsFormController.swift; sourceTree = "<group>"; };
 		E648FC9E2B850018005D59E6 /* PostsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsServiceProtocol.swift; sourceTree = "<group>"; };
-		E648FCA22B85FF60005D59E6 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		E648FCA22B85FF60005D59E6 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		E648FCA42B860CDE005D59E6 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E648FCA62B88A0FA005D59E6 /* AuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +141,7 @@
 				AE5D85B32AC8A224009680C6 /* Assets.xcassets */,
 				AE5D85B52AC8A224009680C6 /* Preview Content */,
 				AE5D85D92AC8A337009680C6 /* WelcomePageView.swift */,
-				E648FCA22B85FF60005D59E6 /* FeedView.swift */,
+				E648FCA22B85FF60005D59E6 /* PostView.swift */,
 			);
 			path = MobileAcebook;
 			sourceTree = "<group>";
@@ -176,6 +178,7 @@
 			children = (
 				AE5D85E02AC9AFA9009680C6 /* AuthenticationService.swift */,
 				E648FC9C2B84FFA8005D59E6 /* PostsFormController.swift */,
+				E648FCA62B88A0FA005D59E6 /* AuthenticationController.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -343,8 +346,9 @@
 				E648FC9D2B84FFA8005D59E6 /* PostsFormController.swift in Sources */,
 				AE5D85E62AC9B077009680C6 /* AuthenticationServiceProtocol.swift in Sources */,
 				4ABE0D702B84F9810052913B /* TokenModel.swift in Sources */,
+				E648FCA72B88A0FA005D59E6 /* AuthenticationController.swift in Sources */,
 				4ABE0D672B84C3FE0052913B /* LoginViewModel.swift in Sources */,
-				E648FCA32B85FF60005D59E6 /* FeedView.swift in Sources */,
+				E648FCA32B85FF60005D59E6 /* PostView.swift in Sources */,
 				AE5D85B02AC8A221009680C6 /* MobileAcebookApp.swift in Sources */,
 				AE5D85E82AC9B29A009680C6 /* User.swift in Sources */,
 				4ABE0D6B2B84C4190052913B /* LoginView.swift in Sources */,
