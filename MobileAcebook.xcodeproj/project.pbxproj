@@ -92,6 +92,13 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		7418E9FB2B88ACD300F47C79 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
 		AE5D85A32AC8A221009680C6 = {
 			isa = PBXGroup;
 			children = (
@@ -123,7 +130,9 @@
 				AE5D85B32AC8A224009680C6 /* Assets.xcassets */,
 				AE5D85B52AC8A224009680C6 /* Preview Content */,
 				AE5D85D92AC8A337009680C6 /* WelcomePageView.swift */,
+				7418E9FB2B88ACD300F47C79 /* Posts */,
 				74C5E36C2B84FF220012B989 /* PostsView.swift */,
+				74CD1C822B8774EB00DFA4C4 /* PostViewModel.swift */,
 			);
 			path = MobileAcebook;
 			sourceTree = "<group>";
@@ -175,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				AE5D85E72AC9B29A009680C6 /* User.swift */,
-				74CD1C822B8774EB00DFA4C4 /* PostViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
