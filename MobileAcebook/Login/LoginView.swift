@@ -116,54 +116,53 @@ struct LoginView: View {
                                         }
                                         
                                     }
-                                    .navigationDestination(isPresented: $isLoggedIn){
-                                        Text("Logado")
-                                        
-                                    }
+                                .navigationDestination(isPresented: $isLoggedIn){
+                                    Text("Logado")
                                     
                                 }
-                                NavigationLink(destination: SignUpView()) {
-                                    Text("Create new account")
-                                        .frame(width: 300, height: 20)
-                                        .foregroundColor(Color("facebookBlue"))
-                                        .font(.title2)
-                                        .padding()
-                                        .background(Color("backgroudBlue"))
-                                        .clipShape(Capsule())
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 50)
-                                                .stroke(Color("facebookBlue"), lineWidth: 1)
-                                        )
-                                    
-                                    
-                                }
-                            }
                             
+                            }
+                            NavigationLink(destination: SignUpPageView()) {
+                                Text("Create new account")
+                                    .frame(width: 300, height: 20)
+                                    .foregroundColor(Color("facebookBlue"))
+                                    .font(.title2)
+                                    .padding()
+                                    .background(Color("backgroudBlue"))
+                                    .clipShape(Capsule())
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 50)
+                                            .stroke(Color("facebookBlue"), lineWidth: 1)
+                                    )
+                                
+                                
+                            }
                         }
                         
                     }
-                    .ignoresSafeArea()
+                    
                 }
-                
-                .navigationBarHidden(true)
-                .alert(isPresented: $loginError) {
-                    Alert(title: Text("Error"),
-                          message: Text("Log in error. Try again"),
-                          dismissButton: .default(Text("Ok")))
-                }
-                
+            .ignoresSafeArea()
+            }
+            
+            .navigationBarHidden(true)
+            .alert(isPresented: $loginError) {
+                Alert(title: Text("Error"),
+                      message: Text("Log in error. Try again"),
+                      dismissButton: .default(Text("Ok")))
             }
             
         }
+        
     }
-    
-    
-    struct LoginView_Previews: PreviewProvider {
-        static var previews: some View {
-            LoginView()
-        }
-    }
-    
-    
-    
 }
+
+
+struct LoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView()
+    }
+}
+
+
+
