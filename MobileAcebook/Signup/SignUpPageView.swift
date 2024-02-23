@@ -1,19 +1,20 @@
 //
-//  LoginView.swift
+//  SignUpPageView.swift
 //  MobileAcebook
 //
-//  Created by Marcela Moreti on 20/02/2024.
+//  Created by Jonny Brownrigg on 20/02/2024.
 //
 
 import SwiftUI
 
-struct LoginView: View {
-    @State var email = ""
-    @State var password = ""
-    @State var isLoggedIn = false
-    @State var loginError = false
-    @ObservedObject var loginViewModel = LoginViewModel(tokenManager: tokenManager)
+struct SignUpPageView: View {
+    @State private var email = ""
+    @State private var password = ""
+    @State private var userCreated = false
+    @State private var userCreatedError = false
+    @ObservedObject var signupViewModel = SignupViewModel()
     
+
     var body: some View {
         
         NavigationView {
@@ -46,7 +47,7 @@ struct LoginView: View {
                                             .stroke(Color("grayBorder"), lineWidth: 1)
                                     )
                                 
-                                TextField("Email", text: $email)
+                                TextField("What is your email?", text: $email)
                                     .textFieldStyle(PlainTextFieldStyle())
                                         .colorScheme(.dark)
                                     .keyboardType(.emailAddress)
@@ -66,7 +67,7 @@ struct LoginView: View {
                                         RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color("grayBorder"), lineWidth: 1)
                                     )
-                                SecureField("Password", text: $password)
+                                SecureField("What is your password?", text: $password)
                                     .textFieldStyle(PlainTextFieldStyle())
                                         .colorScheme(.dark)
                                     .textInputAutocapitalization(.never)
@@ -74,12 +75,6 @@ struct LoginView: View {
                                     .foregroundColor(Color("white"))
                                     .padding(.horizontal, 10)
                             }
-                            
-                            NavigationLink(destination: Text("Form to refresh password")){
-                                Text("Forgotten password?")
-                                
-                            }
-                            
                             
                         }
                         
@@ -89,18 +84,18 @@ struct LoginView: View {
                                     Button {
                                         Task {
 
-                                            let loginResult = await loginViewModel.login(email: email, password: password)
+                                            let userCreatedResult = await signupViewModel.createUser(email: email, password: password)
 
-                                            if loginResult {
-                                                isLoggedIn = true
+                                            if userCreatedResult {
+                                                userCreated = true
 
                                             } else {
-                                                loginError = true
+                                                userCreatedError = true
                                             }
                                             
                                         }
                                     } label: {
-                                        Text("Log in")
+                                        Text("Add an avatar")
                                             .frame(width: 300, height: 20)
                                             .foregroundColor(Color("white"))
                                             .font(.title2)
@@ -110,14 +105,32 @@ struct LoginView: View {
                                     }
                                    
                                     }
-                                .navigationDestination(isPresented: $isLoggedIn){
-                                    FeedView(tokenManager: loginViewModel.tokenManager)
+                                .navigationDestination(isPresented: $userCreated){
+                                    // add avatar functionality here
+                                    LoginView()
                                     
                                 }
                             
                             }
-                            NavigationLink(destination: SignUpPageView()) {
-                                Text("Create new account")
+                        VStack(spacing: 170) {
+                            
+                                VStack {
+                                    Button {
+                                        Task {
+
+                                            let userCreatedResult = await signupViewModel.createUser(email: email, password: password)
+
+                                            if userCreatedResult {
+                                                userCreated = true
+
+                                            } else {
+                                                userCreatedError = true
+                                            }
+                                            
+                                        }
+                                    } label: {
+                                        
+                                Text("Create user")
                                     .frame(width: 300, height: 20)
                                     .foregroundColor(Color("facebookBlue"))
                                     .font(.title2)
@@ -128,11 +141,21 @@ struct LoginView: View {
                                         RoundedRectangle(cornerRadius: 50)
                                             .stroke(Color("facebookBlue"), lineWidth: 1)
                                     )
-                                
-                                
+                                    }
+                                   
+                                    }
+                                .navigationDestination(isPresented: $userCreated){
+                                    LoginView()
+                                    
+                                }
+                                .alert(isPresented: $userCreatedError) {
+                                    Alert(title: Text("Error"),
+                                          message: Text("Please enter valid login details"),
+                                          dismissButton: .default(Text("Ok")))
+                                }
+                            
                             }
                         }
-                        
                     }
                     
                 }
@@ -140,23 +163,12 @@ struct LoginView: View {
             }
             
             .navigationBarHidden(true)
-            .alert(isPresented: $loginError) {
-                Alert(title: Text("Error"),
-                      message: Text("Log in error. Try again"),
-                      dismissButton: .default(Text("Ok")))
-            }
+            
             
         }
         
     }
 }
-
-
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
+#Preview {
+    SignUpPageView()
 }
-
-
-
