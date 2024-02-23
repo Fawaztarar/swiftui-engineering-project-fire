@@ -27,42 +27,47 @@ struct FeedView: View {
         NavigationView {
             ZStack(alignment: .leading) {
                 Color("backgroudBlue")
-                HStack {
-                    TextField("What are you thinking? ...", text: $message)
-                        .colorScheme(.dark)
-                        .foregroundColor(Color("white"))
-                    
-                    
-                    Button(action: {
-                        Task {
-                            do {
-                                guard let token = tokenManager.token?.token else {
-                                    print("Token not found")
-                                    return
+                    .ignoresSafeArea()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    HStack {
+                        TextField("What are you thinking? ...", text: $message)
+                            .font(.system(size: 20, weight: .bold))
+                                .colorScheme(.dark)
+                            .foregroundColor(Color("white"))
+                            .padding(.horizontal, 20) // Add horizontal padding
+                            .padding(.top, 1)
+                        
+                        Button(action: {
+                            Task {
+                                do {
+                                    guard let token = tokenManager.token?.token else {
+                                        print("Token not found")
+                                        return
+                                        
+                                    }
                                     
-                                }
-                                
-                                postViewModel.executeUpload(messagetoSave: message, tokenUse: token) { result in
-                                    switch result {
-                                    case .success(let message):
-                                        print("The following message has been sent: \(message.message)")
-                                    case .failure(let error):
-                                        print("An error occurred: \(error)")
+                                    postViewModel.executeUpload(messagetoSave: message, tokenUse: token) { result in
+                                        switch result {
+                                        case .success(let message):
+                                            print("The following message has been sent: \(message.message)")
+                                        case .failure(let error):
+                                            print("An error occurred: \(error)")
+                                        }
                                     }
                                 }
                             }
+                        }) {
+                            Text("Post")
                         }
-                    }) {
-                        Text("Post")
+                        .buttonStyle(.borderedProminent)
+                        .controlSize(.small)
+                        .position(x: 150, y: 20)
                     }
-                    .buttonStyle(.borderedProminent)
-                    .controlSize(.small)
-                    .position(x: 150, y: 20)
                 }
+                
             }
-            
         }
-    }
+    
 }
 struct FeedView_Previews: PreviewProvider {
     static var previews: some View {

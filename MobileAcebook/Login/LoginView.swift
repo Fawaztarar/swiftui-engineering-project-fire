@@ -35,7 +35,7 @@ struct LoginView: View {
                     VStack(spacing: 30){
                         
                         
-                        
+
                         VStack {
                             
                             ZStack {
