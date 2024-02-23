@@ -31,6 +31,10 @@ struct WelcomePageView: View {
                 NavigationLink("Sign Up", destination: SignUpView())
                     .padding()
                 
+                
+                NavigationLink("Sign Up Page", destination: SignUpPageView())
+                
+                
                 NavigationLink("Log In", destination: LoginView())
                     .padding()
                     

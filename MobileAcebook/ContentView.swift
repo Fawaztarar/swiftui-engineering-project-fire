@@ -12,6 +12,9 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 NavigationLink("Sign Up", destination: SignUpView())
+                
+                NavigationLink("Sign Up Page", destination: SignUpPageView())
+                
                 NavigationLink("Log In", destination: LoginView())
                 NavigationLink("POST FEED VIEW", destination: PostFeedView())
                 
